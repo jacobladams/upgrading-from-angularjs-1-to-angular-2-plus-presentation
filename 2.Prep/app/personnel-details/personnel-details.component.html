@@ -1,0 +1,7 @@
+﻿
+<div ng-hide="$ctrl.personnelDirectory.personnel.isEditting">
+	<personnel-details-read personnel="$ctrl.personnelDirectory.personnel"></personnel-details-read>
+</div>
+<div ng-show="$ctrl.personnelDirectory.personnel.isEditting">
+	<personnel-details-edit personnel="$ctrl.personnelDirectory.personnel"></personnel-details-edit>
+</div>

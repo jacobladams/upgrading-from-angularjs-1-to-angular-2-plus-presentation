@@ -1,0 +1,19 @@
+﻿<div>
+	<img src="{{$ctrl.personnel.image}}" />
+</div>
+<div>
+	<strong>Name: </strong>
+	{{$ctrl.personnel.firstName}} {{$ctrl.personnel.lastName}}
+</div>
+<div>
+	<strong>Title:</strong>
+	{{$ctrl.personnel.title}}
+</div>
+<div>
+	<strong>Is Active:</strong>
+	{{$ctrl.personnel.active}}
+</div>
+<div>
+	<a ng-href="{{$ctrl.personnel.detailsUrl}}">View Details</a>
+</div>
+<button ng-click="$ctrl.editPersonnel($ctrl.personnel)">Edit</button>

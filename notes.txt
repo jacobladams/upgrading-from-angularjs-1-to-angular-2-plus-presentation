@@ -1,0 +1,17 @@
+prep
+	controlleras
+	components
+	no scope
+	1.7
+	typescript
+	http service
+	redux?
+	rxjs?
+	bootstrapping
+webpack?
+bring in angular 2
+ng upgrade
+convert services
+convert components
+show upgrade
+show downgrade
