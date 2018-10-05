@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/Site.css" />
+</head>
+<body>
+
+	<div ng-app="personnelDirectory">
+		<navbar></navbar>
+
+		<ng-view></ng-view>
+	</div>
+	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/angular-resource.min.js"></script>
+	<script src="scripts/angular-route.min.js"></script>
+
+	<script src="app/app.js"></script>
+	<script src="app/help/help.component.js"></script>
+	<script src="app/personnel-details/personnel-details.component.js"></script>
+	<script src="app/personnel-list/personnel-list.component.js"></script>
+	<script src="app/navbar/navbar.component.js"></script>
+	<script src="app/personnel-details-edit/personnel-details-edit.component.js"></script>
+	<script src="app/personnel-details-read/personnel-details-read.component.js"></script>
+	<script src="app/shared/helpService.js"></script>
+	<script src="app/shared/personnelDirectoryService.js"></script>
+
+</body>
+</html>
