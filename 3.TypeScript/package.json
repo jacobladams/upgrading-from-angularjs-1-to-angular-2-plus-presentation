@@ -1,5 +1,5 @@
 {
-  "name": "1.original",
+  "name": "3.typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "@types/angular": "^1.6.51",
+    "typescript": "^3.1.1"
+  }
 }
