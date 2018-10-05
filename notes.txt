@@ -5,7 +5,17 @@ mention why
 	keep system up
 	reduce risk
 	steady upgrade
-
+mention why ng 2+
+	perf
+	simpler
+	plays better with newer tech like modules web components
+	extra features
+	bonus like ssr, service works, pwa, etc.
+	angular 1 will no longer be supported
+migration options
+	complete rewrite
+	maintain
+	migrate
 prep
 	controlleras
 	components
