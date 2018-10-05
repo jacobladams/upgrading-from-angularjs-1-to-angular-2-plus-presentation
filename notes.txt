@@ -1,3 +1,11 @@
+vocabulary
+	angularjs/angular
+	upgrade/update/migration/etc.
+mention why
+	keep system up
+	reduce risk
+	steady upgrade
+
 prep
 	controlleras
 	components
