@@ -21,36 +21,6 @@ module.exports = function(env) {
 		//     new webpack.NamedModulesPlugin(),
 	];
 
-	//   if (isProd) {
-	//     plugins.push(
-	//       new webpack.LoaderOptionsPlugin({
-	//         minimize: true,
-	//         debug: false
-	//       }),
-	//       new webpack.optimize.UglifyJsPlugin({
-	//         compress: {
-	//           warnings: false,
-	//           screw_ie8: true,
-	//           conditionals: true,
-	//           unused: true,
-	//           comparisons: true,
-	//           sequences: true,
-	//           dead_code: true,
-	//           evaluate: true,
-	//           if_return: true,
-	//           join_vars: true,
-	//         },
-	//         output: {
-	//           comments: false,
-	//         },
-	//       })
-	//     );
-	//   } else {
-	//     plugins.push(
-	//       new webpack.HotModuleReplacementPlugin()
-	//     );
-	//   }
-
 	return {
 		devtool: isProd ? 'source-map' : 'eval',
 		context: sourcePath,
@@ -73,41 +43,9 @@ module.exports = function(env) {
 					loader: 'html-loader'
 				},
 				{
-					test: /\.scss$/,
-					exclude: /node_modules/,
-					use: [{
-                        loader: 'file-loader',
-                        options: {
-                            name: 'styles.min.css',
-                            outputPath: '../styles/'
-                        }
-                    },'extract-loader', 'css-loader', 'sass-loader']
-				},
-				{
-					test: /\.css$/,
-					use: ['style-loader', 'css-loader']
-				},
-				// {
-				//     enforce: 'pre',
-				//     test: /\.ts?$/,
-				//     loader: 'baggage-loader?[file].html&[file].css' ,
-				//     exclude: /(node_modules)/,
-				// },
-				// {
-				//     test: /\.html$/,
-				//     exclude: /node_modules/,
-				//     use: [
-				//       // 'ng-annotate-loader',
-				//       // 'awesome-typescript-loader'
-				//       'ngtemplate-loader?relativeTo=' + __dirname + '/!html'
-				//     ],
-				//   },
-				{
 					test: /\.ts$/,
 					exclude: /node_modules/,
 					use: [
-						// 'ng-annotate-loader',
-						// 'awesome-typescript-loader'
 						'ts-loader'
 					]
 				}
@@ -120,17 +58,13 @@ module.exports = function(env) {
 
 		plugins,
 
-		performance: isProd && {
-			maxAssetSize: 100,
-			maxEntrypointSize: 300,
-			hints: 'warning'
-		},
+		// performance: isProd && {
+		// 	maxAssetSize: 100,
+		// 	maxEntrypointSize: 300,
+		// 	hints: 'warning'
+		// },
 
-		stats: {
-			colors: {
-				green: '\u001b[32m'
-			}
-		},
+	
 
 		devServer: {
 			contentBase: './src',
