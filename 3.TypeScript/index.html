@@ -6,24 +6,23 @@
 </head>
 <body>
 
-	<div ng-app="personnelDirectory">
+	<div>
 		<navbar></navbar>
 
 		<ng-view></ng-view>
 	</div>
-	<script src="scripts/angular.min.js"></script>
-	<script src="scripts/angular-resource.min.js"></script>
-	<script src="scripts/angular-route.min.js"></script>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-route/angular-route.min.js"></script>
 
-	<script src="app/app.js"></script>
-	<script src="app/help/help.component.js"></script>
-	<script src="app/personnel-details/personnel-details.component.js"></script>
-	<script src="app/personnel-list/personnel-list.component.js"></script>
-	<script src="app/navbar/navbar.component.js"></script>
-	<script src="app/personnel-details-edit/personnel-details-edit.component.js"></script>
-	<script src="app/personnel-details-read/personnel-details-read.component.js"></script>
-	<script src="app/shared/helpService.js"></script>
-	<script src="app/shared/personnelDirectoryService.js"></script>
+	<script src="dist/app.module.js"></script>
+	<script src="dist/help/help.component.js"></script>
+	<script src="dist/personnel-details/personnel-details.component.js"></script>
+	<script src="dist/personnel-list/personnel-list.component.js"></script>
+	<script src="dist/navbar/navbar.component.js"></script>
+	<script src="dist/personnel-details-edit/personnel-details-edit.component.js"></script>
+	<script src="dist/personnel-details-read/personnel-details-read.component.js"></script>
+	<script src="dist/shared/help.service.js"></script>
+	<script src="dist/shared/personnelDirectory.service.js"></script>
 
 </body>
 </html>

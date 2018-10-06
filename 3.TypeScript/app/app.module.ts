@@ -1,4 +1,4 @@
-﻿angular.module('personnelDirectory', ['ngRoute', 'ngResource']);
+﻿angular.module('personnelDirectory', ['ngRoute']);
 
 angular.module('personnelDirectory').config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 	$routeProvider.
@@ -16,3 +16,7 @@ angular.module('personnelDirectory').config(['$routeProvider', '$locationProvide
 		});
 	$locationProvider.html5Mode(false);
 }]);
+
+angular.element(document).ready(()=>{
+	angular.bootstrap(document.body, ['personnelDirectory']);
+});

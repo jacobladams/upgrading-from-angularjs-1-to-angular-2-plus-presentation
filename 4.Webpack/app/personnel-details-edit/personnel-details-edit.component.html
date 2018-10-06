@@ -1,0 +1,24 @@
+﻿<div>
+	<img ng-src="{{$ctrl.personnel.image}}" />
+</div>
+<div>
+	<strong>First Name: </strong>
+	<input type="text" ng-model="$ctrl.personnel.firstName" />
+</div>
+<div>
+	<strong>Last Name: </strong>
+	<input type="text" ng-model="$ctrl.personnel.lastName" />
+</div>
+<div>
+	<strong>Title:</strong>
+	<!--<input type="text" ng-model="personnel.title" />-->
+	<select ng-options="title for title in $ctrl.titles track by title" ng-model="$ctrl.personnel.title"></select>
+</div>
+<div>
+	<strong>Is Active:</strong>
+	<input type="checkbox" ng-model="$ctrl.personnel.active" />
+</div>
+<div>
+	<a ng-href="{{$ctrl.personnel.detailsUrls}}">View Details</a>
+</div>
+<button ng-click="$ctrl.savePersonnel({personnel: $ctrl.personnel})">Save</button>
