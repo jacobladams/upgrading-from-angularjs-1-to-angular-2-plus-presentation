@@ -1,8 +1,8 @@
 ﻿import { UpgradeComponent } from '@angular/upgrade/static';
-import { Directive, ElementRef, Injector } from "@angular/core";
+import { Directive, ElementRef, Injector, Input, Output, EventEmitter } from '@angular/core';
 
 export class PersonnelDetailsEditComponent implements ng.IComponentOptions {
-    templateUrl = './personnel-details-edit.component.html';
+    template = require('./personnel-details-edit.component.html');
     bindings = {
         personnel: '=',
         titles: '=',
@@ -14,8 +14,11 @@ export class PersonnelDetailsEditComponent implements ng.IComponentOptions {
   selector: 'personnel-details-edit'
 })
 export class PersonnelDetailsEditDirective extends UpgradeComponent {
-  constructor(elementRef: ElementRef, injector: Injector)
-  {
-    super('personnel-details-edit', elementRef, injector);
+  @Input() personnel: Personnel;
+  @Input() titles: string[];
+  @Output() savePersonnel: EventEmitter<Personnel>;
+
+  constructor(elementRef: ElementRef, injector: Injector){
+    super('personnelDetailsEdit', elementRef, injector);
   }
 }

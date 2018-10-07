@@ -1,7 +1,7 @@
 ﻿
-<div ng-hide="$ctrl.personnelDirectory.personnel.isEditting">
-	<personnel-details-read personnel="$ctrl.personnelDirectory.personnel" edit-personnel="$ctrl.personnelDirectory.editPersonnel(personnel)"></personnel-details-read>
+<div *ngIf="!personnelDirectory?.personnel?.isEditting">
+	<personnel-details-read [personnel]="personnelDirectory?.personnel" (editPersonnel)="personnelDirectory?.editPersonnel($event)"></personnel-details-read>
 </div>
-<div ng-show="$ctrl.personnelDirectory.personnel.isEditting">
-	<personnel-details-edit personnel="$ctrl.personnelDirectory.personnel" titles="$ctrl.personnelDirectory.titles" save-personnel="$ctrl.personnelDirectory.savePersonnel(personnel)"></personnel-details-edit>
+<div *ngIf="personnelDirectory?.personnel?.isEditting">
+	<personnel-details-edit [personnel]="personnelDirectory?.personnel" [titles]="personnelDirectory?.titles" (savePersonnel)="personnelDirectory?.savePersonnel($event.personnel)"></personnel-details-edit>
 </div>

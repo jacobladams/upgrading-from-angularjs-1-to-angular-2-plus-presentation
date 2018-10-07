@@ -1,24 +1,25 @@
-﻿import { ElementRef, Injector, Directive } from "@angular/core";
-import { UpgradeComponent } from "@angular/upgrade/static";
+﻿// export class PersonnelDetailsReadComponent implements ng.IComponentOptions {
 
-export class PersonnelDetailsReadComponent implements ng.IComponentOptions {
-  templateUrl = './personnel-details-read.component.html';
-  bindings = {
-      personnel: '=',
-      editPersonnel: '&'
-  };
-}
+// template = require('./personnel-details-read.component.html');
+//   bindings = {
+//       personnel: '=',
+//       editPersonnel: '&'
+//   };
+// }
 
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
-@Directive({
-  selector: 'personnel-details-read'
+@Component({
+  selector: 'personnel-details-read',
+  templateUrl: './personnel-details-read.component.html'
 })
-export class PersonnelDetailsReadDirective extends UpgradeComponent {
-  constructor(elementRef: ElementRef, injector: Injector)
-  {
-    super('personnel-details-read', elementRef, injector);
-  }
+export class PersonnelDetailsReadComponent {
+  @Input() personnel: Personnel;
+  @Output() editPersonnel = new EventEmitter<Personnel>();
 }
+
+
+
 
 
 

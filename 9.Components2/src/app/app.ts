@@ -1,4 +1,4 @@
-﻿import { PersonnelDetailsEditComponent } from './personnel-details-edit/personnel-details-edit.component';
+﻿
 
 import * as angular from 'angular';
 
@@ -7,10 +7,11 @@ import 'angular-route';
 import {HelpComponent} from './help/help.component';
 // import { NavBarComponent } from './navbar/navbar.component';
 import { PersonnelListComponent } from './personnel-list/personnel-list.component';
-import { PersonnelDetailsComponent } from './personnel-details/personnel-details.component';
+// import { PersonnelDetailsComponent } from './personnel-details/personnel-details.component';
 // import { HelpService } from './shared/help.service';
 import { PersonnelDirectory } from './shared/personnelDirectory.service';
-import { PersonnelDetailsReadComponent } from './personnel-details-read/personnel-details-read.component';
+// import { PersonnelDetailsReadComponent } from './personnel-details-read/personnel-details-read.component';
+import { PersonnelDetailsEditComponent } from './personnel-details-edit/personnel-details-edit.component';
 
 // angular.module('rocket-start', ['rocket-start-templates']);
 var app = angular.module('personnelDirectory', ['ngRoute']);
@@ -24,7 +25,7 @@ app
   .component('personnelList', new PersonnelListComponent())
   // .component('personnelDetails', new PersonnelDetailsComponent())
   .component('personnelDetailsEdit', new PersonnelDetailsEditComponent())
-  .component('personnelDetailsRead', new PersonnelDetailsReadComponent())
+  // .component('personnelDetailsRead', new PersonnelDetailsReadComponent())
   ;
 
 
