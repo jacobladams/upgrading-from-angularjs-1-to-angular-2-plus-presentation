@@ -1,3 +1,4 @@
+import { PersonnelListComponent } from './app/personnel-list/personnel-list.component';
 import { HelpComponent } from './app/help/help.component';
 // import { PersonnelDetailsReadDirective } from './app/personnel-details-read/personnel-details-read.component';
 // import { PersonnelDetailsEditDirective } from './app/personnel-details-edit/personnel-details-edit.component';
@@ -29,6 +30,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
   angular.module('personnelDirectory')
     .service('helpService', downgradeInjectable(HelpService))
+    .directive('personnelList', downgradeComponent({component: PersonnelListComponent}))
     .directive('personnelDetails', downgradeComponent({component: PersonnelDetailsComponent}))
     .directive('help', downgradeComponent({component: HelpComponent}));
 

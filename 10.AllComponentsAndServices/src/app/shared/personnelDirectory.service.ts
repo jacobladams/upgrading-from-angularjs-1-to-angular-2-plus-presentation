@@ -1,23 +1,29 @@
-﻿export class PersonnelDirectory {
+﻿import { Injectable, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable()
+export class PersonnelDirectory {
   private personnelApiUrl = 'http://localhost:4000/personnel';
   private titleApiUrl = 'http://localhost:4000/titles';
 
   personnelList: Personnel[];
   personnel: Personnel;
-  getPersonnelPromise: ng.IPromise<Personnel[]>;
+  getPersonnelPromise: Promise<Personnel[]>;
 
   titles: string[];
 
-  static $inject = ['$http'];
-  constructor(private $http: ng.IHttpService) {
-    this.getPersonnelPromise = $http
+  constructor(private http: HttpClient) {
+    this.getPersonnelPromise = http
       .get<Personnel[]>(this.personnelApiUrl)
+      .toPromise()
       .then(result => {
-        this.personnelList = result.data;
+        this.personnelList = result;
         return this.personnelList;
       });
-    $http.get<string[]>(this.titleApiUrl).then(result => {
-      this.titles = result.data;
+    http.get<string[]>(this.titleApiUrl)
+    .toPromise()
+    .then(result => {
+      this.titles = result;
     });
   }
 
@@ -32,8 +38,9 @@
   savePersonnel(personnel) {
     console.log('editting personnel');
     console.log(personnel);
-    this.$http
+    this.http
       .post(`${this.personnelApiUrl}/${personnel.id}`, personnel)
+      .toPromise()
       .then(function() {
         personnel.isEditting = false;
       });

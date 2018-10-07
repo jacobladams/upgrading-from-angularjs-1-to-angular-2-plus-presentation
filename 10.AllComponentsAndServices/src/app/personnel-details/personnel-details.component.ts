@@ -34,7 +34,7 @@ export class PersonnelDetailsComponent {
 
   constructor(
     @Inject('$routeParams')$routeParams: ng.route.IRouteParamsService,
-    @Inject('personnelDirectory')public personnelDirectory: PersonnelDirectory
+    public personnelDirectory: PersonnelDirectory
   ) {
     const personnelId = $routeParams.id;
 
