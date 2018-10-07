@@ -16,6 +16,8 @@ migration options
 	complete rewrite
 	maintain
 	migrate
+explain how system works
+	upgrade/downgrade/change detection
 prep
 	controlleras
 	components
@@ -26,6 +28,7 @@ prep
 	redux?
 	rxjs?
 	bootstrapping
+	bring in angular from npm?
 webpack?
 bring in angular 2
 ng upgrade
@@ -33,3 +36,51 @@ convert services
 convert components
 show upgrade
 show downgrade
+
+ttd
+clear desktop
+change background
+insert photos
+correct package.json
+	devdep
+	name
+	license
+	author
+prep
+	file name/structure
+	http
+	manual bootstrap
+	bring in angular from npm
+	app component
+
+Typescript
+	create component classes
+all
+	fix details url on edit details html
+	refresh lock files
+	remove dist folders
+	add emitdecoratormetadata tsconfig
+
+
+Joes Eames 16 step migration plan
+prep
+	follow angular 1 style guide
+	update to latest angular 1
+	use components for future dev
+	switch existing controllers to components
+	remove incompatable features form directives
+	switch directives to components
+	switch to manual bootstrapping
+	add a typescript and a build
+	start using es6
+	switch controllers to es6 classes
+	switch service to es6 classes
+	
+migration
+	add angular 2
+	boostrap angular 2
+		mention app.module.ts and app.component.ts
+		mention bootstrapping, mention showing ng view
+	migrate application piece by piece
+	migrate routing
+	turn off angular 1

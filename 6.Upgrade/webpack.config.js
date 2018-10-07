@@ -15,7 +15,7 @@ module.exports = function(env) {
 		  minChunks: Infinity,
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor.bundle',
+			name: 'vendor',
 			chunks: ['vendor', 'app'],
 			minChunks: 2,
 		  }),
