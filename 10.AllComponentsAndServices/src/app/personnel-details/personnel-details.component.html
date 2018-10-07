@@ -1,0 +1,8 @@
+﻿
+<div *ngIf="!personnelDirectory?.personnel?.isEditting">
+	<personnel-details-read [personnel]="personnelDirectory?.personnel" (editPersonnel)="personnelDirectory?.editPersonnel($event)"></personnel-details-read>
+</div>
+<div *ngIf="personnelDirectory?.personnel?.isEditting">
+  <personnel-details-edit [personnel]="personnelDirectory?.personnel" [titles]="personnelDirectory?.titles" (savePersonnel)="personnelDirectory?.savePersonnel($event)"></personnel-details-edit>
+  <!-- <personnel-details-edit [personnel]="personnelDirectory?.personnel" [titles]="personnelDirectory?.titles"></personnel-details-edit> -->
+</div>
