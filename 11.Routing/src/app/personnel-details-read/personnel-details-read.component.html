@@ -1,0 +1,21 @@
+﻿<div>
+	<img [src]="personnel?.image" />
+</div>
+<div>
+	<strong>Name: </strong>
+	{{personnel?.firstName}} {{personnel?.lastName}}
+</div>
+<div>
+	<strong>Title:</strong>
+	{{personnel?.title}}
+</div>
+<div>
+	<strong>Is Active:</strong>
+	{{personnel?.active}}
+</div>
+<div>
+	<a [href]="personnel?.detailsUrl">View Details</a>
+</div>
+<button (click)="editPersonnel.emit(personnel)">Edit</button>
+
+

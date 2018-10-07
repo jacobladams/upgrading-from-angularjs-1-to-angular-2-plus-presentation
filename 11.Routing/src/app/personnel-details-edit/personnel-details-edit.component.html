@@ -1,0 +1,30 @@
+﻿<div *ngIf="personnel">
+  <div>
+    <img [src]="personnel.image" />
+  </div>
+
+  <div>
+    <strong>First Name: </strong>
+    <input type="text" [(ngModel)]="personnel.firstName" />
+  </div>
+
+
+  <div>
+    <strong>Last Name: </strong>
+    <input type="text" [(ngModel)]="personnel.lastName" />
+  </div>
+  <div>
+    <strong>Title:</strong>
+    <select [(ngModel)]="personnel.title">
+      <option *ngFor="let title of titles" [ngValue]="title">{{title}}</option>
+    </select>
+  </div>
+  <div>
+    <strong>Is Active:</strong>
+    <input type="checkbox" [(ngModel)]="personnel.active" />
+  </div>
+  <div>
+    <a [href]="personnel.detailsUrl">View Details</a>
+  </div>
+  <button (click)="savePersonnel.emit(personnel)">Save</button>
+</div>
