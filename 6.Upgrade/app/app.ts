@@ -5,7 +5,7 @@ import * as angular from 'angular';
 import 'angular-route';
 
 import {HelpComponent} from './help/help.component';
-import {NavBarComponent} from './navbar/navbar.component';
+// import { NavBarComponent } from './navbar/navbar.component';
 import { PersonnelListComponent } from './personnel-list/personnel-list.component';
 import { PersonnelDetailsComponent } from './personnel-details/personnel-details.component';
 // import { HelpService } from './shared/help.service';
@@ -20,7 +20,7 @@ app
 	//.service('helpService', HelpService)
 	.service('personnelDirectory', PersonnelDirectory)
 	.component('help', new HelpComponent())
-	.component('navbar', new NavBarComponent())
+	// .component('navbar', new NavBarComponent())
 	.component('personnelList', new PersonnelListComponent())
 	.component('personnelDetails', new PersonnelDetailsComponent())
 	.component('personnelDetailsEdit', new PersonnelDetailsEditComponent())

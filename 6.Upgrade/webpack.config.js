@@ -55,7 +55,7 @@ module.exports = function(env) {
 				{
 					test: /\.ts$/,
 					exclude: /node_modules/,
-					use: ['ts-loader']
+					use: ['ts-loader', 'angular2-template-loader']
 				}
 			]
 		},

@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-     "build": "npm run clean-dev && webpack",
-    "clean-dev": "rimraf dist/*"
+		"build": "npm run clean-dev && webpack",
+		"clean-dev": "rimraf dist/*"
 	},
 	"author": "jacobladams",
 	"license": "MIT",
@@ -21,8 +21,8 @@
 		"@angular/platform-browser-dynamic": "^6.1.9",
 		"@angular/router": "^6.1.9",
 		"@angular/upgrade": "^6.1.9",
-    "core-js": "^2.5.7",
-    "rxjs": "^6.3.3",
+		"core-js": "^2.5.7",
+		"rxjs": "^6.3.3",
 		"zone.js": "^0.8.26",
 		"angular": "^1.7.5",
 		"angular-route": "^1.7.5"
@@ -31,8 +31,9 @@
 		"@types/angular": "^1.6.51",
 		"@types/angular-route": "^1.7.0",
 		"@types/node": "^10.5.6",
-    "typescript": "^3.1.1",
-    "rimraf": "2.5.4",
+		"typescript": "^3.1.1",
+		"rimraf": "2.5.4",
+		"angular2-template-loader": "^0.6.2",
 		"ts-loader": "^3.5.0",
 		"html-loader": "^0.5.5",
 		"webpack": "^3.3.0",

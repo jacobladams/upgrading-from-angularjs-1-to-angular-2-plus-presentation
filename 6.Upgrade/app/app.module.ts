@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './navbar/navbar.component';
 
 function getHttp(injector) {
   console.log('running injector');
@@ -13,7 +14,7 @@ function getHttp(injector) {
 
 @NgModule({
 	imports: [BrowserModule, FormsModule, HttpClientModule, UpgradeModule],
-	declarations: [AppComponent],
+	declarations: [AppComponent, NavBarComponent],
 	providers: [
 		HelpService,
 		{
@@ -22,7 +23,7 @@ function getHttp(injector) {
 			deps: ['$injector']
 		}
 	],
-	bootstrap: [AppComponent],
+	bootstrap: [AppComponent, NavBarComponent],
 	entryComponents: []
 })
 export class AppModule {}
