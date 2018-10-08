@@ -10,7 +10,7 @@
    ]
   },
   "include": [
-    "app/app.module.ts",
+    "app/app.ts",
     "app/**/*.ts"
 ],
   "exclude": [
