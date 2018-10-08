@@ -6,11 +6,12 @@
     "moduleResolution": "node",
     "lib": [
       "dom",
-      "es5",
+      "es2017",
       "scripthost",
       "es2015.iterable",
    ],
-   "experimentalDecorators": true
+   "experimentalDecorators": true,
+   "emitDecoratorMetadata": true
   },
   "include": [
     "main.ts",

@@ -15,7 +15,7 @@ module.exports = function(env) {
 		  minChunks: Infinity,
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor.bundle',
+			name: 'vendor',
 			chunks: ['vendor', 'app'],
 			minChunks: 2,
 		  }),
@@ -55,7 +55,7 @@ module.exports = function(env) {
 				{
 					test: /\.ts$/,
 					exclude: /node_modules/,
-					use: ['ts-loader']
+					use: ['ts-loader', 'angular2-template-loader']
 				}
 			]
 		},
@@ -64,35 +64,6 @@ module.exports = function(env) {
 			modules: [path.resolve(__dirname, 'node_modules'), sourcePath]
 		},
 
-		plugins,
-
-		// performance: isProd && {
-		// 	maxAssetSize: 100,
-		// 	maxEntrypointSize: 300,
-		// 	hints: 'warning'
-		// },
-
-		devServer: {
-			contentBase: './src',
-			historyApiFallback: true,
-			port: 3000,
-			compress: isProd,
-			inline: !isProd,
-			hot: !isProd,
-			stats: {
-				assets: true,
-				children: false,
-				chunks: false,
-				hash: false,
-				modules: false,
-				publicPath: false,
-				timings: true,
-				version: false,
-				warnings: true,
-				colors: {
-					green: '\u001b[32m'
-				}
-			}
-		}
+		plugins
 	};
 };
