@@ -13,6 +13,6 @@ class HelpController {
 }
 
 export class HelpComponent implements ng.IComponentOptions {
-  templateUrl = './help.component.html';
+  template = require('./help.component.html');
   controller = HelpController;
 }

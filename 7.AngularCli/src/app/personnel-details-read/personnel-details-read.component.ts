@@ -1,5 +1,5 @@
 ﻿export class PersonnelDetailsReadComponent implements ng.IComponentOptions {
-  templateUrl = './personnel-details-read.component.html';
+  template = require('./personnel-details-read.component.html');
   bindings = {
       personnel: '=',
       editPersonnel: '&'

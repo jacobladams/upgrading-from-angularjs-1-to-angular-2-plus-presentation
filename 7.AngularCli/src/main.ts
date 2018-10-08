@@ -14,8 +14,6 @@ import * as angular from 'angular';
 
 import 'angular-route';
 
-// declare var angular: angular.IAngularStatic;
-
 setAngularLib(angular);
 
 if (environment.production) {

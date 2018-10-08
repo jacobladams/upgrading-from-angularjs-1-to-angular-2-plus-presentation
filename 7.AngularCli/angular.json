@@ -21,13 +21,7 @@
             "assets": [
               "src/favicon.ico",
               // "src/assets",
-              {"glob": "**/*.*", "input": "./src/assets/images", "output": "./images"},
-              {"glob": "**/*.html", "input": "./src/app/help", "output": "./"},
-              {"glob": "**/*.html", "input": "./src/app/personnel-details", "output": "./"},
-              {"glob": "**/*.html", "input": "./src/app/personnel-details-edit", "output": "./"},
-              {"glob": "**/*.html", "input": "./src/app/personnel-details-read", "output": "./"},
-              {"glob": "**/*.html", "input": "./src/app/personnel-list", "output": "./"},
-
+              {"glob": "**/*.*", "input": "./src/assets/images", "output": "./images"}
             ],
             "styles": [
               "src/styles.css"
