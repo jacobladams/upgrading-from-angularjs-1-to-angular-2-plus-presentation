@@ -1,4 +1,4 @@
-﻿import { PersonnelDetailsEditComponent } from './personnel-details-edit/personnel-details-edit.component';
+﻿
 
 import * as angular from 'angular';
 
@@ -11,6 +11,7 @@ import { PersonnelDetailsComponent } from './personnel-details/personnel-details
 // import { HelpService } from './shared/help.service';
 import { PersonnelDirectory } from './shared/personnelDirectory.service';
 // import { PersonnelDetailsReadComponent } from './personnel-details-read/personnel-details-read.component';
+import { PersonnelDetailsEditComponent } from './personnel-details-edit/personnel-details-edit.component';
 
 // angular.module('rocket-start', ['rocket-start-templates']);
 var app = angular.module('personnelDirectory', ['ngRoute']);
