@@ -30,11 +30,6 @@ module.exports = function(env) {
 			ng2: root + '/main.ts',
 			vendor: ['angular/angular.js', 'angular-route/angular-route.js']
 		},
-		// optimization: {
-		// 	splitChunks: {
-		// 		chunks: 'all'
-		// 	}
-		// },
 		output: {
 			path: destPath + '/scripts',
 			filename: '[name].min.js'
