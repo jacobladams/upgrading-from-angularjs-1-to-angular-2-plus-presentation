@@ -9,6 +9,6 @@ class PersonnelListController {
 }
 
 export class PersonnelListComponent implements ng.IComponentOptions {
-    templateUrl = './personnel-list.component.html';
+    template = require('./personnel-list.component.html');
     controller = PersonnelListController;
 }

@@ -30,8 +30,6 @@
   }
 
   savePersonnel(personnel) {
-    console.log('editting personnel');
-    console.log(personnel);
     this.$http
       .post(`${this.personnelApiUrl}/${personnel.id}`, personnel)
       .then(function() {

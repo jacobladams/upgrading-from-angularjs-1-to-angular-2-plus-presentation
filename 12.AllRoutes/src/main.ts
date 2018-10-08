@@ -1,7 +1,5 @@
 import { PersonnelListComponent } from './app/personnel-list/personnel-list.component';
 import { HelpComponent } from './app/help/help.component';
-// import { PersonnelDetailsReadDirective } from './app/personnel-details-read/personnel-details-read.component';
-// import { PersonnelDetailsEditDirective } from './app/personnel-details-edit/personnel-details-edit.component';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -18,8 +16,6 @@ import * as angular from 'angular';
 
 import 'angular-route';
 import { PersonnelDetailsComponent } from './app/personnel-details/personnel-details.component';
-
-// declare var angular: angular.IAngularStatic;
 
 setAngularLib(angular);
 

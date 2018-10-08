@@ -19,10 +19,6 @@ module.exports = function(env) {
 			chunks: ['vendor', 'app'],
 			minChunks: 2,
 		  }),
-		//     new webpack.EnvironmentPlugin({
-		//       NODE_ENV: nodeEnv,
-		//     }),
-		//     new webpack.NamedModulesPlugin(),
 
 		new webpack.ContextReplacementPlugin(/\@angular(\\|\/)core(\\|\/)fesm5/, sourcePath),
 	];
@@ -33,14 +29,8 @@ module.exports = function(env) {
 		entry: {
 			app: sourcePath + '/app.ts',
 			ng2: root + '/main.ts',
-			// ng2vendor: root + '/ng2vendor.ts',
 			vendor: ['angular/angular.js', 'angular-route/angular-route.js']
 		},
-		// optimization: {
-		// 	splitChunks: {
-		// 		chunks: 'all'
-		// 	}
-		// },
 		output: {
 			path: destPath + '/scripts',
 			filename: '[name].min.js'
