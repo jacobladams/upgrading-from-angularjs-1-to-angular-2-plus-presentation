@@ -40,6 +40,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 		otherwise({
 			redirectTo: '/personnel'
 		});
+	$locationProvider.hashPrefix('');
 	$locationProvider.html5Mode(false);
 }]);
 

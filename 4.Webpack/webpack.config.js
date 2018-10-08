@@ -9,23 +9,18 @@ module.exports = function(env) {
 	const isProd = nodeEnv === 'production';
 
 	const plugins = [
-		
-		//     new webpack.optimize.CommonsChunkPlugin({
-		//       name: 'vendor',
-		//       minChunks: Infinity,
-		//       filename: 'vendor.bundle.js'
-		//     }),
-		//     new webpack.EnvironmentPlugin({
-		//       NODE_ENV: nodeEnv,
-		//     }),
-		//     new webpack.NamedModulesPlugin(),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'vendor',
+			chunks: ['vendor', 'app'],
+			minChunks: Infinity,
+		})
 	];
 
 	return {
 		devtool: isProd ? 'source-map' : 'eval',
 		context: sourcePath,
 		entry: {
-			app: sourcePath + '/app.module.ts',
+			app: sourcePath + '/app.ts',
 			vendor: [
                 'angular/angular.js',
                 'angular-route/angular-route.js',
@@ -56,37 +51,13 @@ module.exports = function(env) {
 			modules: [path.resolve(__dirname, 'node_modules'), sourcePath]
 		},
 
-		plugins,
-
-		// performance: isProd && {
-		// 	maxAssetSize: 100,
-		// 	maxEntrypointSize: 300,
-		// 	hints: 'warning'
-		// },
-
-	
-
-		devServer: {
-			contentBase: './src',
-			historyApiFallback: true,
-			port: 3000,
-			compress: isProd,
-			inline: !isProd,
-			hot: !isProd,
-			stats: {
-				assets: true,
-				children: false,
-				chunks: false,
-				hash: false,
-				modules: false,
-				publicPath: false,
-				timings: true,
-				version: false,
-				warnings: true,
-				colors: {
-					green: '\u001b[32m'
-				}
-			}
-		}
+		plugins
+		// optimization: {
+		// 	splitChunks: {
+		// 	  chunks:  'all',
+		// 	  minChunks: 2,
+		// 	  name: 'vendor'
+		// 	}
+		//   }
 	};
 };
