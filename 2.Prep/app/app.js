@@ -17,3 +17,7 @@ angular.module('personnelDirectory').config(['$routeProvider', '$locationProvide
 	$locationProvider.hashPrefix('');
 	$locationProvider.html5Mode(false);
 }]);
+
+angular.element(document).ready(()=>{
+	angular.bootstrap(document.body, ['personnelDirectory']);
+});
