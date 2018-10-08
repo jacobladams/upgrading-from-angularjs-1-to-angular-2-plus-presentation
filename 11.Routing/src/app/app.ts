@@ -2,7 +2,6 @@
 
 import 'angular-route';
 
-// angular.module('rocket-start', ['rocket-start-templates']);
 var app = angular.module('personnelDirectory', ['ngRoute']);
 
 app.config([
