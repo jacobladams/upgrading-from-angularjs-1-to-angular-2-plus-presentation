@@ -1,0 +1,3 @@
+interface Help {
+  helpText: string;
+}
