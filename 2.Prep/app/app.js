@@ -14,5 +14,6 @@ angular.module('personnelDirectory').config(['$routeProvider', '$locationProvide
 		otherwise({
 			redirectTo: '/personnel'
 		});
+	$locationProvider.hashPrefix('');
 	$locationProvider.html5Mode(false);
 }]);

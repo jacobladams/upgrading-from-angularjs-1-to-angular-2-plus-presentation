@@ -5,8 +5,6 @@
 		
 		var personnelId = $routeParams.id;
 
-		console.log(personnelId);
-
 		personnelDirectory.setPersonnel(personnelId);
 	
 		$ctrl.personnelDirectory = personnelDirectory;

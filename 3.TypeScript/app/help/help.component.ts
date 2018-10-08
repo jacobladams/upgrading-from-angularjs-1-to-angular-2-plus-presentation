@@ -20,24 +20,9 @@ class HelpController {
     }
 }
 
-angular.module('personnelDirectory').component('help', {
-    templateUrl: '/app/help/help.component.html',
-    controller: HelpController
-});
+class HelpComponent implements ng.IComponentOptions {
+    templateUrl = '/app/help/help.component.html';
+    controller = HelpController
+}
 
-// class HelpComponent implements ng.IComponentOptions {
-
-//     public bindings: any;
-//     public controller: any;
-//     public controllerAs: string;
-//     public template: string;
-
-//     constructor() {
-//         this.bindings = {
-//             name: '@'
-//         };
-//         this.controller = MyController;
-//         this.controllerAs = 'vm';
-//         this.template = '<button>{{vm.name}}</button>';
-//     }
-// }
+angular.module('personnelDirectory').component('help', new HelpComponent());

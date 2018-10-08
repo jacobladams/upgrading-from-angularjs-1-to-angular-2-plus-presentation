@@ -6,7 +6,9 @@
     }
 }
 
-angular.module('personnelDirectory').component('personnelList', {
-    templateUrl: '/app/personnel-list/personnel-list.component.html',
-    controller: PersonnelListController
-});
+class PersonnelListComponent implements ng.IComponentOptions {
+	templateUrl = '/app/personnel-list/personnel-list.component.html';
+	controller = PersonnelListController
+}
+
+angular.module('personnelDirectory').component('personnelList', new PersonnelListComponent());

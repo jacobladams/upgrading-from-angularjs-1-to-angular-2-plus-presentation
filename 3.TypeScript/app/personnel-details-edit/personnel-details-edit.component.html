@@ -11,7 +11,6 @@
 </div>
 <div>
 	<strong>Title:</strong>
-	<!--<input type="text" ng-model="personnel.title" />-->
 	<select ng-options="title for title in $ctrl.titles track by title" ng-model="$ctrl.personnel.title"></select>
 </div>
 <div>
@@ -19,6 +18,6 @@
 	<input type="checkbox" ng-model="$ctrl.personnel.active" />
 </div>
 <div>
-	<a ng-href="{{$ctrl.personnel.detailsUrls}}">View Details</a>
+	<a ng-href="{{$ctrl.personnel.detailsUrl}}">View Details</a>
 </div>
 <button ng-click="$ctrl.savePersonnel({personnel: $ctrl.personnel})">Save</button>

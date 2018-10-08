@@ -8,8 +8,10 @@
         personnelDirectory.setPersonnel(personnelId);
     }
 }
-    
-angular.module('personnelDirectory').component('personnelDetails', {
-    templateUrl: '/app/personnel-details/personnel-details.component.html',
-    controller: PersonnelDetailsController
-});
+
+class PersonnelDetailsComponent implements ng.IComponentOptions {
+    templateUrl = '/app/personnel-details/personnel-details.component.html';
+    controller = PersonnelDetailsController
+}
+
+angular.module('personnelDirectory').component('personnelDetails', new PersonnelDetailsComponent());
