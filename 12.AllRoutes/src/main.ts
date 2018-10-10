@@ -25,10 +25,9 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
   angular.module('personnelDirectory')
-    .service('helpService', downgradeInjectable(HelpService))
-    .directive('personnelList', downgradeComponent({component: PersonnelListComponent}))
-    .directive('personnelDetails', downgradeComponent({component: PersonnelDetailsComponent}))
-    .directive('help', downgradeComponent({component: HelpComponent}));
+    // .directive('personnelList', downgradeComponent({component: PersonnelListComponent}))
+    // .directive('personnelDetails', downgradeComponent({component: PersonnelDetailsComponent}))
+    // .directive('help', downgradeComponent({component: HelpComponent}));
 
   platformRef.injector.get(UpgradeModule).bootstrap(document.body, ['personnelDirectory']);
   console.log('bootstrapped');

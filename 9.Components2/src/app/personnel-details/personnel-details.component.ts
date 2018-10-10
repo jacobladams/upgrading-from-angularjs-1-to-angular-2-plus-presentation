@@ -24,8 +24,6 @@
 import { PersonnelDirectory } from '../shared/personnelDirectory.service';
 import { Component, Inject } from '@angular/core';
 
-
-
 @Component({
   selector: 'personnel-details',
   templateUrl: './personnel-details.component.html'

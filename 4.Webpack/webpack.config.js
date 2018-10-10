@@ -52,12 +52,5 @@ module.exports = function(env) {
 		},
 
 		plugins
-		// optimization: {
-		// 	splitChunks: {
-		// 	  chunks:  'all',
-		// 	  minChunks: 2,
-		// 	  name: 'vendor'
-		// 	}
-		//   }
 	};
 };
