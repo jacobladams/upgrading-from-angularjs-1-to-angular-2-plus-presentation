@@ -23,7 +23,7 @@ function getHttp(injector) {
 			deps: ['$injector']
 		}
 	],
-	bootstrap: [AppComponent, NavBarComponent],
-	entryComponents: []
+	bootstrap: [AppComponent],
+	entryComponents: [NavBarComponent]
 })
 export class AppModule {}
