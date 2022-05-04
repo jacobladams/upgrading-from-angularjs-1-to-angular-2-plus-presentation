@@ -10,7 +10,7 @@
   "author": "jacobladams",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.7.5",
+    "angular": "^1.8.3",
     "angular-route": "^1.7.5"
   },
   "devDependencies": {
